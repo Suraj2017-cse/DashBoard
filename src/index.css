@@ -1,13 +1,105 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Nav  */
+.h-100{
+  height: 90vh !important;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Card Item */
+#item1{
+  background-color: #DDEFE0;
+}
+#item2{
+  background-color: #F4ECDD;
+}
+#item3{
+  background-color: #EFDADA;
+}
+#item4{
+  background-color: #DEE0EF;
+}
+
+/* Charts */
+.guest::before{
+  clip-path: circle();
+  background-color: #E9A0A0;
+}
+.user::before{
+  clip-path: circle();
+  background-color: #9BDD7C;
+}
+
+/* products  */
+.pants::before{
+  clip-path: circle();
+  background-color: #F6DC7D;
+}
+
+.line1::after{
+  left: -20px;
+  background-color: #9BDD7C;
+}
+.line2::after{
+  left: -20px;
+  background-color: #6972C3;
+}
+
+/* piechart */
+.piechart {
+  /* margin-top: 300px; */
+  /* display: block; */
+  /* position: absolute; */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: conic-gradient(
+    #EE8484  60deg, 
+    #F6DC7D 0 178deg, 
+    #98D89E  0);
+}
+
+
+
+@media screen and (max-width:639px) {
+  .hidden{
+    display: block;
+  }
+  .show{
+    display: flex !important;
+  }
+  
+  .nav{
+    /* display: block; */
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    z-index: 9;
+  }
+  .nav-item{
+    height: 100vh !important;
+    display: none;
+    border-radius: 0;
+  }
+  .deshboard{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:490px) {
+  #search{
+    display: none;
+  }
+  .searchBar{
+    position: static;
+  }
+  .product{
+    display: block;
+  }
+  .me-8{
+    margin-inline-end: 0;
+    margin-left: .8rem !important;
+  }
 }
